@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое портфолио | Веб-разработчик</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Портфолио</a>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Привет, я <span class="highlight">Маден Ернар</span></h1>
+                <p class="hero-subtitle">Студент-программист</p>
+                <p class="hero-description">Создаю программы, ботов в телеграмме и попутно учусь новому</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">Смотреть работы</a>
+                    <a href="#contact" class="btn btn-secondary">Связаться со мной</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder about-img">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Моя история</h3>
+                    <p>Я занимаюсь программированием более 4 лет. Начинал со школы с простого калькулятора, впрочем как и все. Постоянно изучаю новые технологии и углубляюсь в разработку программ и телеграмм-ботов.</p>
+                    <p>Моя цель - создавать не только красивые, но и удобные в использовании программ, которые решают задачи пользователей и приносят пользу бизнесу.</p>
+                    <div class="about-details">
+                        <div class="detail">
+                            <strong>Имя:</strong> Маден Ернар
+                        </div>
+                        <div class="detail">
+                            <strong>Город:</strong>Экибастуз
+                        </div>
+                        <div class="detail">
+                            <strong>Образование:</strong> Высшее техническое неоконченное 
+                        </div>
+                        <div class="detail">
+                            <strong>Опыт:</strong> 4+ года
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Навыки -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Мои навыки</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>Frontend</h3>
+                    <p>HTML</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 10%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend</h3>
+                    <p>Dart, MySQL, C++, Python</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 43%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Дизайн</h3>
+                    <p>Figma, UI/U, Canva</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 20%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Инструменты</h3>
+                    <p>Git, Webpack, Gulp, Docker, VS Code</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 35%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Мои работы</h2>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">Все</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-img">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Мобильное приложение</h3>
+                        <p>Приложение для заказа еды</p>
+                        <a href="app_detail.html" class="portfolio-link">Подробнее</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-img">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>ТГ-бот для заказа аниматоров</h3>
+                        <p>Полнофункциональный телеграм-бот</p>
+                        <a href="bot_detail.html" class="portfolio-link">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Связаться со мной</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Мои контакты</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>maden-010@mail.ru</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Телефон</h4>
+                            <p>+7 (771) 527-54-14</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Город проживания</h4>
+                            <p>Экибастуз, Казахстан</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/DragoKZs"><i class="fab fa-github"></i></a>
+                        <a href="https://t.me/lilbitch06"><i class="fab fa-telegram"></i></a>
+                        <a href="https://vk.com/emaden"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Отправить сообщение</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Ваш email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Маден Ернар. Все права защищены.</p>
+            <p>Портфолио студента-разработчика</p>
+        </div>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <a href="#home" class="scroll-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
