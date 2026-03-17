@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мобильное приложение "Столовая ToU" | Портфолио Маден Ернара</title>
+    <title>Мобильное приложение "Столовая ToU" | Портфолио Мадена Ернара</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -62,14 +62,6 @@
             color: var(--primary-color);
         }
         
-        .project-section h2.white {
-            color: white;
-        }
-        
-        .project-section h2.white .highlight {
-            color: #ffd700;
-        }
-        
         .overview-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -117,17 +109,15 @@
         }
         
         .tech-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
             margin-top: 30px;
         }
         
         .tech-card {
-            flex: 1 1 calc(50% - 15px);
-            min-width: 200px;
             background: white;
-            padding: 25px;
+            padding: 30px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
             text-align: center;
@@ -160,15 +150,15 @@
         
         .main-screenshot img {
             max-width: 100%;
-            max-height: 600px;
-            border-radius: 30px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
             border: 3px solid white;
         }
         
         .screenshot-gallery-modern {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 30px;
         }
         
@@ -181,19 +171,14 @@
         }
         
         .gallery-card:hover {
-            transform: translateY(-15px) scale(1.02);
+            transform: translateY(-10px);
             box-shadow: 0 30px 60px rgba(79, 70, 229, 0.3);
         }
         
         .gallery-card img {
             width: 100%;
-            height: 500px;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-        
-        .gallery-card:hover img {
-            transform: scale(1.05);
+            height: auto;
+            display: block;
         }
         
         .gallery-card p {
@@ -202,6 +187,8 @@
             font-size: 1.1rem;
             text-align: center;
             background: white;
+            margin: 0;
+            border-top: 1px solid rgba(0,0,0,0.05);
             position: relative;
         }
         
@@ -310,19 +297,59 @@
         .navigation-buttons {
             display: flex;
             justify-content: center;
-            gap: 20px;
             margin-top: 60px;
         }
         
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
+        /* Стили для темной темы */
+        [data-theme="dark"] .project-section.bg-light {
+            background-color: #1a2332 !important;
         }
         
-        .btn-outline:hover {
-            background: var(--primary-color);
-            color: white;
+        [data-theme="dark"] .gallery-card,
+        [data-theme="dark"] .tech-card,
+        [data-theme="dark"] .role-card,
+        [data-theme="dark"] .stat-item,
+        [data-theme="dark"] .feature-item {
+            background-color: #1e293b !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        [data-theme="dark"] .gallery-card p {
+            background-color: #1e293b;
+            color: #f1f5f9;
+            border-top-color: #334155;
+        }
+        
+        [data-theme="dark"] .tech-card h3,
+        [data-theme="dark"] .role-card h3,
+        [data-theme="dark"] .stat-number,
+        [data-theme="dark"] .feature-item span {
+            color: #f1f5f9;
+        }
+        
+        [data-theme="dark"] .tech-card p,
+        [data-theme="dark"] .role-card ul li,
+        [data-theme="dark"] .stat-label {
+            color: #94a3b8;
+        }
+        
+        [data-theme="dark"] .main-screenshot {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        
+        [data-theme="dark"] .main-screenshot img {
+            border-color: #334155;
+        }
+        
+        [data-theme="dark"] .navigation-buttons .btn-primary {
+            background-color: #4f46e5;
+            box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+        }
+        
+        [data-theme="dark"] .project-hero {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         }
         
         @media (max-width: 992px) {
@@ -350,8 +377,8 @@
                 font-size: 2rem;
             }
             
-            .tech-card {
-                flex: 1 1 100%;
+            .screenshot-gallery-modern {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -378,7 +405,7 @@
     <section class="project-hero">
         <div class="container">
             <span class="project-badge">
-                <i class="fas fa-star"></i> Практика
+                <i class="fas fa-star"></i> Дипломный проект
             </span>
             <h1>Мобильное приложение<br>"Столовая ToU"</h1>
             <p>Полноценная экосистема для заказа еды в университетской столовой с тремя ролями пользователей и управлением в реальном времени</p>
@@ -391,7 +418,7 @@
             <div class="overview-grid">
                 <div class="overview-text">
                     <h2>О проекте <span class="highlight">в деталях</span></h2>
-                    <p>Это моя практическая работа — мобильное приложение, которое полностью автоматизирует процесс заказа еды в университетской столовой. Главная цель — избавиться от очередей и сделать процесс заказа максимально удобным для всех участников.</p>
+                    <p>Это моя дипломная работа — мобильное приложение, которое полностью автоматизирует процесс заказа еды в университетской столовой. Главная цель — избавиться от очередей и сделать процесс заказа максимально удобным для всех участников.</p>
                     <p>Приложение решает реальную проблему: в часы пик в столовой скапливаются огромные очереди, студенты тратят по 15-20 минут на обед. С моим приложением они могут заранее выбрать блюда, оплатить онлайн и просто забрать готовый заказ.</p>
                     
                     <div class="feature-grid">
@@ -471,6 +498,10 @@
                     <div class="stat-number">4</div>
                     <div class="stat-label">Категории меню</div>
                 </div>
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Статусов заказа</div>
+                </div>
             </div>
         </div>
     </section>
@@ -540,7 +571,7 @@
     <!-- Навигация -->
     <section class="project-section bg-light">
         <div class="container">
-            <div class="navigation-buttons" style="justify-content: center;">
+            <div class="navigation-buttons">
                 <a href="index.html#portfolio" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1rem;">
                     <i class="fas fa-arrow-left" style="margin-right: 10px;"></i> Назад к портфолио
                 </a>
