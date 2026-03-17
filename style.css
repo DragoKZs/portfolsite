@@ -757,3 +757,135 @@ section {
         font-size: 1.6rem;
     }
 }
+
+/* ========== ТЕМНАЯ ТЕМА ========== */
+:root {
+    --bg-color: #f9fafb;
+    --text-color: #1f2937;
+    --card-bg: #ffffff;
+    --navbar-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: #e5e7eb;
+    --secondary-text: #6b7280;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --text-color: #f1f5f9;
+    --card-bg: #1e293b;
+    --navbar-bg: #0b1120;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --border-color: #334155;
+    --secondary-text: #94a3b8;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    background-color: var(--navbar-bg) !important;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.nav-links a {
+    color: var(--text-color);
+}
+
+.skill-card,
+.portfolio-item,
+.gallery-card,
+.pricing-card,
+.tech-card,
+.role-card,
+.stat-item,
+.feature-item,
+.flow-step,
+.contact-item,
+.form-group input,
+.form-group textarea {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+.skill-card p,
+.portfolio-info p,
+.gallery-card p,
+.pricing-features li,
+.flow-step p,
+.contact-item p,
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--secondary-text);
+}
+
+.skill-bar {
+    background-color: var(--border-color);
+}
+
+.footer {
+    background-color: var(--navbar-bg);
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-color) 100%);
+}
+
+/* Кнопка переключения темы */
+.theme-switch {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: var(--text-color);
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.theme-switch:hover {
+    transform: rotate(15deg);
+}
+
+/* Адаптация для мобилок */
+@media (max-width: 768px) {
+    .theme-switch {
+        margin: 15px 0 0 0;
+    }
+    
+    .nav-links.active {
+        padding-bottom: 20px;
+    }
+}
+
+/* Дополнительные стили для темной темы */
+[data-theme="dark"] .btn-secondary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+[data-theme="dark"] .filter-btn {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+[data-theme="dark"] .image-placeholder {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+[data-theme="dark"] .project-hero {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
